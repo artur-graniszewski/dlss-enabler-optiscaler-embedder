@@ -1,6 +1,10 @@
 #pragma once
 #include <windows.h>
 
+extern "C" {
+	BOOL WINAPI optisc_original_DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved);
+}
+// 
 // Minimalna konfiguracja — można rozszerzyć w przyszłości
 struct OptiScalerConfig {
     // Jeśli true (domyślnie), podczas Init zrobimy krótkie "spoofowanie" nazwy
